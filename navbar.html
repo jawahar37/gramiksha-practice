@@ -8,18 +8,23 @@
   <style type="text/css">
     /*using internal stylesheet for readability*/
     #space-filler {
-      background-color: #BECC9A
+      background-color: #BEDC9A;
+      /*margin-top: 66px;*/
     }
     .navbar-custom {
-      background-color: #4183c4;
-      color: #f1f1f1;
+      border: 8px solid transparent;
+      background-color: rgba(248, 248, 248, 0.5);
+    }
+    /*#projects-dropdown:hover {*/
+    .hover-dropdown > a:hover {
+      background-color: rgba(48, 48, 48, 0.2) !important;
     }
   </style>
 </head>
 <body>
 
   <!-- Using w3schools' code as a template -->
-  <nav class="navbar navbar-fixed-top navbar-default">
+  <nav class="navbar navbar-fixed-top navbar-default navbar-custom">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -33,7 +38,7 @@
         <ul class="nav navbar-nav">
           <!-- <li class="active"><a href="#">Home</a></li> -->
           <li class="dropdown hover-dropdown">
-            <a href="./projects">Our projects<span class="caret"></span></a>
+            <a id="projects-dropdown" href="./projects">Our projects<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="./projects#project1">Project 1</a></li>
               <li class="divider"></li>
