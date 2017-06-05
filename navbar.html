@@ -30,8 +30,15 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Our Projects</a></li>
+          <!-- <li class="active"><a href="#">Home</a></li> -->
+          <li class="dropdown hover-dropdown">
+            <a href="./projects">Our projects<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./projects#project1">Project 1</a></li>
+              <li><a href="./projects#project2">Project 2</a></li>
+              <li><a href="./projects#project3">Project 3</a></li>
+            </ul>
+          </li>
           <li><a href="#">About us</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -43,8 +50,17 @@
   </nav>
   <div id="space-filler" style="width:100vw; height:1000px"></div>
 </body>
-
   <script src="js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+        $('.hover-dropdown').hover(function() {
+            $(this).addClass('open');
+        },
+        function() {
+            $(this).removeClass('open');
+        });
+    });
+  </script>
   <script src="js/bootstrap.js"></script>
 
 </html>
